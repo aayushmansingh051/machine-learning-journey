@@ -1,2 +1,0 @@
-a="Aayushman"
-print(a)
