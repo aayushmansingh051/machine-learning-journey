@@ -1,0 +1,2 @@
+a="Aayushman"
+print(a)
