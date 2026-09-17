@@ -10,3 +10,7 @@ print(new_df)
 print("next part\n")
 new_df = df.fillna(method="ffill")
 print(new_df)
+
+new_df = df.fillna(method="ffill",limit=1)
+print(new_df)
+
