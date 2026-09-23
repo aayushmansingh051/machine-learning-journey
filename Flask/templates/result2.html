@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result Summary</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h2 { color: #2c3e50; text-align: center; }
+        table { width: 50%; margin: auto; border-collapse: collapse; }
+        th, td { border: 1px solid #999; padding: 10px; text-align: center; }
+        th { background-color: #f2f2f2; }
+        .average { font-weight: bold; color: #27ae60; }
+    </style>
+</head>
+<body>
+    <h2>Your Score Report</h2>
+    <table>
+        <tr><th>Subject</th><th>Score</th></tr>
+        <tr><td>Science</td><td>{{ science }}</td></tr>
+        <tr><td>Maths</td><td>{{ maths }}</td></tr>
+        <tr><td>C Programming</td><td>{{ c }}</td></tr>
+        <tr><td>Data Science</td><td>{{ datascience }}</td></tr>
+        <tr><td class="average">Average</td><td class="average">{{ results }}</td></tr>
+    </table>
+
+    {% if results >= 50 %}
+        <p style="text-align:center; color:green;">Status: PASSED ✅</p>
+    {% else %}
+        <p style="text-align:center; color:red;">Status: FAILED ❌</p>
+    {% endif %}
+
+    <p style="text-align:center;"><a href="/">Go back to form</a></p>
+</body>
+</html>
